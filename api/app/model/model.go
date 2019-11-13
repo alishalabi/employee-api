@@ -12,3 +12,15 @@ type Employee struct {
   Age int `json:"age"`
   Status bool `json:"status"`
 }
+
+func (e *Employee) Disable() {
+  e.Status = false
+}
+
+func (p *Employee) Enable() {
+  e.Status = true
+}
+ func DBMigrate(db *gorm.DB) *gorm.DB {
+   db.AutoMigrate(&Employee{})
+   return db
+ }
