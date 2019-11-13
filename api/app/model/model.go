@@ -6,7 +6,7 @@ import (
 )
 
 type Employee struct {
-  gorm.model
+  gorm.Model
   Name string `gorm:"unique" json:"name"`
   City string `json:"city"`
   Age int `json:"age"`
@@ -17,7 +17,7 @@ func (e *Employee) Disable() {
   e.Status = false
 }
 
-func (p *Employee) Enable() {
+func (e *Employee) Enable() {
   e.Status = true
 }
  func DBMigrate(db *gorm.DB) *gorm.DB {

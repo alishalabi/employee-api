@@ -23,7 +23,7 @@ func CreateEmployee(db *gorm.DB, w http.ResponseWriter, r *http.Request) {
     respondError(w, http.StatusBadRequest, err.Error())
     return
   }
-  respondJSON(w. http.StatusCreated, employee)
+  respondJSON(w, http.StatusCreated, employee)
 }
 
 func GetEmployee(db *gorm.DB, w http.ResponseWriter, r *http.Request) {

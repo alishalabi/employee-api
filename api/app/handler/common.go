@@ -5,7 +5,7 @@ import (
   "net/http"
 )
 
-func respondJSON(w http.ResonseWriter, status int, payload interface{}) {
+func respondJSON(w http.ResponseWriter, status int, payload interface{}) {
   response, err := json.Marshal(payload)
   if err != nil {
     w.WriteHeader(http.StatusInternalServerError)
