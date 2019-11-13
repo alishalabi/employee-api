@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/api/app"
-	"github.com/api/config"
+	"author-api/api/app"
+	"author-api/api/config"
 )
 
 func main() {
